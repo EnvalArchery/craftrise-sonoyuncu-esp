@@ -21,16 +21,15 @@ protected void preRenderCallback(AbstractClientPlayer entitylivingbaseIn, float 
     float f = 0.9375F;
     GlStateManager.scale(f, f, f);
 }
-```
-
 As a result, the function call will look like this:
-```java
+
+java
+
 glScalef(0.9375F, 0.9375F, 0.9375F);
-```
+By intercepting the glScalef function and comparing all three parameters in it with those written above, we can assume that the game is currently going to render the player.
 
-By intercepting the `glScalef` function and comparing all three parameters in it with those written above, we can assume that the game is currently going to render the player.
+cpp
 
-```cpp
 void WINAPI hk_glScalef(float x, float y, float z)
 {
     if (x == 0.9375f and y == 0.9375f and z == 0.9375f)
@@ -41,35 +40,21 @@ void WINAPI hk_glScalef(float x, float y, float z)
     // Calling the original function
     fn_glScalef(x, y, z);
 }
-```
+Now we can draw something right inside the condition or save the data of the GL_MODELVIEW_MATRIX and GL_PROJECTION_MATRIX matrixes for later use.
 
-Now we can draw something right inside the condition or save the data of the `GL_MODELVIEW_MATRIX` and `GL_PROJECTION_MATRIX` matrixes for later use.
+Function names, as well as unique parameters, can be obtained by viewing the decompiled game code or by monitoring OpenGL function calls using specialized tools.
 
-Function names, as well as unique parameters, can be obtained by viewing the decompiled game code or by monitoring OpenGL function calls using [specialized tools][specialized-tools-link].
-
-### Current Theme
-- Blue-tinted ESP outlines for detected entities and containers.
-- Lightweight DLL project structure using OpenGL interception plus MinHook.
-- Local README preview asset included in `assets/demo-preview.png`.
-
-### Compilation
-- Clone this repository.
-- Open the **simple-esp** solution file in [Visual Studio IDE][vs-download-link].
-- Select the target platform.
-- Press `ctrl + shift + b` to compile.
-
-### Usage
-- Open any DLL-injector **as administrator**.
-- Find the **java minecraft** process.
-- Inject the `simple-esp.dll` into process.
-
-Before use, we strongly recommend that you read the [license][license-link].
-
-[vs-download-link]: <https://visualstudio.microsoft.com/downloads/>
-[tsuda-link]: <https://github.com/tsudakageyu>
-[tsuda-project-link]: <https://github.com/tsudakageyu/minhook>
-[jackquelin-site-link]: <http://jacquelin.potier.free.fr>
-[jackquelin-program-link]: <http://jacquelin.potier.free.fr/winapioverride32>
-[zayats80888-link]: <https://www.cyberforum.ru/members/1417352.html>
-[license-link]: <../master/license.md>
-[specialized-tools-link]: <https://www.khronos.org/opengl/wiki/Debugging_Tools>
+Current Theme
+Blue-tinted ESP outlines for detected entities and containers.
+Lightweight DLL project structure using OpenGL interception plus MinHook.
+Local README preview asset included in assets/demo-preview.png.
+Compilation
+Clone this repository.
+Open the simple-esp solution file in Visual Studio IDE.
+Select the target platform.
+Press ctrl + shift + b to compile.
+Usage
+Open any DLL-injector as administrator.
+Find the java minecraft process.
+Inject the simple-esp.dll into process.
+Before use, we strongly recommend that you read the license.

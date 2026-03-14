@@ -1,0 +1,71 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1120" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111F"/>
+      <stop offset="1" stop-color="#10294A"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0C1A2B" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#16375E" stop-opacity="0.88"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="214" cy="130" r="220" fill="#143B63" fill-opacity="0.35"/>
+  <circle cx="1060" cy="630" r="260" fill="#0D5FC2" fill-opacity="0.20"/>
+  <rect x="56" y="54" width="1168" height="612" rx="28" fill="url(#panel)" stroke="#5FB7FF" stroke-opacity="0.22"/>
+
+  <rect x="94" y="88" width="1092" height="56" rx="14" fill="#091423" stroke="#4CA9FF" stroke-opacity="0.24"/>
+  <circle cx="126" cy="116" r="7" fill="#3FB1FF"/>
+  <circle cx="150" cy="116" r="7" fill="#6BCAFF"/>
+  <circle cx="174" cy="116" r="7" fill="#9CE2FF"/>
+  <text x="214" y="124" fill="#D6EEFF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Simple ESP Blue Theme Demo</text>
+
+  <rect x="116" y="168" width="770" height="444" rx="22" fill="#07101B" stroke="#58B6FF" stroke-opacity="0.18"/>
+  <rect x="914" y="168" width="250" height="444" rx="22" fill="#0A1422" stroke="#58B6FF" stroke-opacity="0.18"/>
+
+  <path d="M116 500L228 446L366 474L492 392L640 430L760 356L886 412V612H116V500Z" fill="#173861"/>
+  <path d="M116 548L264 484L388 520L534 450L656 482L786 430L886 468V612H116V548Z" fill="#214B7C"/>
+  <rect x="184" y="352" width="38" height="114" fill="#0D1A28"/>
+  <rect x="192" y="314" width="22" height="38" fill="#13253A"/>
+  <rect x="330" y="330" width="44" height="136" fill="#0D1A28"/>
+  <rect x="338" y="288" width="28" height="42" fill="#13253A"/>
+  <rect x="534" y="266" width="62" height="176" fill="#0D1A28"/>
+  <rect x="546" y="224" width="38" height="42" fill="#13253A"/>
+
+  <g filter="url(#glow)" stroke="#59B8FF" stroke-width="4">
+    <rect x="171" y="292" width="64" height="188" rx="4"/>
+    <rect x="318" y="264" width="68" height="215" rx="4"/>
+    <rect x="521" y="198" width="88" height="258" rx="4"/>
+  </g>
+
+  <g stroke="#9ADFFF" stroke-width="2" stroke-dasharray="10 10" opacity="0.7">
+    <line x1="203" y1="292" x2="203" y2="238"/>
+    <line x1="352" y1="264" x2="352" y2="214"/>
+    <line x1="565" y1="198" x2="565" y2="142"/>
+  </g>
+
+  <rect x="942" y="194" width="194" height="104" rx="16" fill="#0D1D31" stroke="#59B8FF" stroke-opacity="0.22"/>
+  <text x="966" y="230" fill="#E1F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Overlay Palette</text>
+  <rect x="968" y="248" width="34" height="12" rx="6" fill="#3D8FFF"/>
+  <text x="1016" y="259" fill="#BFDFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Entity outline</text>
+  <rect x="968" y="272" width="34" height="12" rx="6" fill="#6BC7FF"/>
+  <text x="1016" y="283" fill="#BFDFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Chest outline</text>
+
+  <rect x="942" y="322" width="194" height="126" rx="16" fill="#0D1D31" stroke="#59B8FF" stroke-opacity="0.22"/>
+  <text x="966" y="356" fill="#E1F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Demo Notes</text>
+  <text x="966" y="388" fill="#BFDFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Blue ESP outline theme</text>
+  <text x="966" y="414" fill="#BFDFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16">Example mock preview image</text>
+
+  <rect x="942" y="474" width="194" height="110" rx="16" fill="#0D1D31" stroke="#59B8FF" stroke-opacity="0.22"/>
+  <text x="966" y="508" fill="#E1F3FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Status</text>
+  <text x="966" y="540" fill="#75D0FF" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">READY</text>
+  <text x="966" y="566" fill="#BFDFFF" font-family="Segoe UI, Arial, sans-serif" font-size="16">README preview asset</text>
+</svg>
